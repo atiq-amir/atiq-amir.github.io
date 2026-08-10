@@ -1,0 +1,483 @@
+/* =========================================
+   EDUCATION SECTION
+========================================= */
+
+.education-section {
+  position: relative;
+  padding: 120px 7%;
+  background: #080611;
+  overflow: hidden;
+}
+
+/* Background Glow */
+
+.education-section::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  top: 10%;
+  left: -220px;
+  background: rgba(124, 58, 237, 0.12);
+  filter: blur(120px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.education-section::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  bottom: 0;
+  right: -200px;
+  background: rgba(168, 85, 247, 0.1);
+  filter: blur(120px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.education-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.education-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 80px;
+}
+
+.education-subtitle {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #a855f7;
+  text-transform: uppercase;
+}
+
+.education-heading h2 {
+  margin: 0;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #ffffff;
+  letter-spacing: -1.5px;
+}
+
+.education-heading h2 span {
+  background: linear-gradient(
+    90deg,
+    #8b5cf6,
+    #c084fc,
+    #a855f7
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.education-heading p {
+  margin-top: 20px;
+  color: #a1a1aa;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.education-timeline {
+  position: relative;
+  width: 100%;
+}
+
+/* Central Line */
+
+.education-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #7c3aed 10%,
+    #a855f7 50%,
+    #7c3aed 90%,
+    transparent
+  );
+}
+
+
+/* =========================================
+   TIMELINE ITEM
+========================================= */
+
+.education-item {
+  position: relative;
+  display: flex;
+  width: 50%;
+  margin-bottom: 70px;
+}
+
+.education-item.left {
+  justify-content: flex-end;
+  padding-right: 55px;
+}
+
+.education-item.right {
+  margin-left: 50%;
+  padding-left: 55px;
+}
+
+
+/* =========================================
+   TIMELINE ICON
+========================================= */
+
+.education-icon {
+  position: absolute;
+  top: 30px;
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #a855f7
+  );
+
+  border: 5px solid #080611;
+
+  color: #ffffff;
+  font-size: 22px;
+
+  box-shadow:
+    0 0 0 1px rgba(168, 85, 247, 0.35),
+    0 0 30px rgba(124, 58, 237, 0.4);
+
+  z-index: 5;
+}
+
+.education-item.left .education-icon {
+  right: -29px;
+}
+
+.education-item.right .education-icon {
+  left: -29px;
+}
+
+
+/* =========================================
+   EDUCATION CARD
+========================================= */
+
+.education-card {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+
+  padding: 32px;
+
+  background: rgba(18, 15, 30, 0.75);
+  border: 1px solid rgba(168, 85, 247, 0.18);
+  border-radius: 20px;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.education-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 4px;
+  height: 100%;
+
+  border-radius: 20px 0 0 20px;
+
+  background: linear-gradient(
+    to bottom,
+    #8b5cf6,
+    #c084fc
+  );
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(168, 85, 247, 0.5);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.4),
+    0 0 35px rgba(124, 58, 237, 0.12);
+}
+
+.education-card:hover::before {
+  opacity: 1;
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.education-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.education-status {
+  padding: 6px 12px;
+
+  border-radius: 30px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  color: #c084fc;
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.education-number {
+  font-size: 28px;
+  font-weight: 800;
+  color: rgba(168, 85, 247, 0.15);
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.education-card h3 {
+  margin: 0 0 10px;
+
+  font-size: 21px;
+  line-height: 1.4;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.education-card h4 {
+  margin: 0 0 20px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  color: #a855f7;
+}
+
+.education-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.education-meta span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  font-size: 12px;
+  color: #a1a1aa;
+}
+
+.education-meta svg {
+  color: #8b5cf6;
+  font-size: 13px;
+}
+
+.education-card p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.8;
+
+  color: #9ca3af;
+}
+
+
+/* =========================================
+   BOTTOM LINE
+========================================= */
+
+.education-line {
+  width: 45px;
+  height: 3px;
+
+  margin-top: 25px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #c084fc
+  );
+
+  transition: width 0.4s ease;
+}
+
+.education-card:hover .education-line {
+  width: 80px;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .education-section {
+    padding: 100px 5%;
+  }
+
+  .education-item {
+    width: 100%;
+  }
+
+  .education-item.left,
+  .education-item.right {
+    margin-left: 0;
+    padding-left: 80px;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+
+  .education-timeline::before {
+    left: 29px;
+  }
+
+  .education-item.left .education-icon,
+  .education-item.right .education-icon {
+    left: 0;
+    right: auto;
+  }
+
+  .education-card {
+    max-width: 100%;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .education-section {
+    padding: 80px 20px;
+  }
+
+  .education-heading {
+    margin-bottom: 60px;
+  }
+
+  .education-heading h2 {
+    font-size: 38px;
+  }
+
+  .education-heading p {
+    font-size: 14px;
+  }
+
+  .education-item.left,
+  .education-item.right {
+    padding-left: 65px;
+    margin-bottom: 45px;
+  }
+
+  .education-timeline::before {
+    left: 23px;
+  }
+
+  .education-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+    border-width: 4px;
+  }
+
+  .education-item.left .education-icon,
+  .education-item.right .education-icon {
+    left: 0;
+  }
+
+  .education-card {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+
+  .education-card h3 {
+    font-size: 18px;
+  }
+
+  .education-card h4 {
+    font-size: 14px;
+  }
+
+  .education-meta {
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .education-card p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .education-number {
+    font-size: 22px;
+  }
+}
+
