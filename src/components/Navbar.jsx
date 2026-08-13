@@ -50,7 +50,7 @@ function Navbar() {
           </a>
 
           <a
-            href="/CV.pdf"
+          href="/CV.pdf?v=2"
             target="_blank"
             rel="noopener noreferrer"
             className="navbar-cv"
